@@ -26,7 +26,7 @@ background: #0C0C0C;
 .container-2 {
 padding: 10px 5%;
 position: relative;
-margin-top: -20px;
+margin-top: 0px;
 background: #0C0C0C;
 }
 .container {
@@ -355,7 +355,7 @@ margin-left: 3px;
 padding:15px;
 }
 .container-2 {
-margin-top: -110px;
+margin-top: -130px;
 }
 .logos{
 margin-top: -18px;

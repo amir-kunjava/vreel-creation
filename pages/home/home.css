@@ -25,7 +25,6 @@ background: #0C0C0C;
 }
 .container-2 {
 padding: 10px 5%;
-margin-top: -130px;
 position: relative;
 background: #0C0C0C;
 }
@@ -89,7 +88,7 @@ font-size:  50px;
 font-weight: 600;
 color: white;
 margin-bottom: 15px;
-margin-top: 80px;
+margin-top: 50px;
 }
 .line-about, .line-service, .line-tools, .line-touch {
 width:110px;
@@ -353,6 +352,9 @@ margin-left: 3px;
 @media(max-width:768px){
 #navbar{
 padding:15px;
+}
+.container-2 {
+margin-top: -130px;l
 }
 .logos{
 margin-top: -18px;

@@ -20,7 +20,7 @@ cursor: pointer;
 }
 .container-3 {
 padding: 10px 5%;
-margin-top: -40px;
+margin-top: -70px;
 }
 .container-2 {
 padding: 10px 5%;
@@ -354,6 +354,12 @@ padding:15px;
 }
 .container-2 {
 margin-top: -130px;
+}
+.container {
+margin-top: 0px;
+}
+.container-3 {
+margin-top: -70px;
 }
 .logos{
 margin-top: -18px;

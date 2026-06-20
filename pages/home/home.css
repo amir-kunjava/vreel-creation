@@ -21,19 +21,15 @@ cursor: pointer;
 .container-3 {
 padding: 10px 5%;
 margin-top: -40px;
-background: #0C0C0C;
 }
 .container-2 {
 padding: 10px 5%;
-background: #0C0C0C;
 }
 .container {
 padding: 10px 5%;
-background: #0C0C0C;
 }
 .container-4 {
 padding: 10px 5%;
-background: #0C0C0C; 
 padding-bottom: 20px;
 }
 .header-text {
@@ -47,6 +43,9 @@ background-image: url('images/desktop-background.png');
 background-size: cover;
 background-position: center;
 background-repeat: no-repeat;
+}
+.start {
+    background: #0C0C0C;
 }
 .header-text h1{
 font-size: 37px;

@@ -1,4 +1,4 @@
- * {
+* {
 margin: 0;
 padding: 0;
 font-family: 'poppins', sans-serif;
@@ -91,11 +91,11 @@ margin-top: -100px;
 margin-bottom: 15px;
 }
 .line-about, .line-service, .line-tools, .line-touch {
-width: 30%;
+width: 25%;
 height:4px;
 background:#00cfff;
 border-radius:50px;
-margin-left:20%;
+margin-left:37.5%;
 }
 .tab-titles{
 display: flex;
@@ -351,13 +351,13 @@ padding:15px;
 margin-top: -120px;
 }
 .container {
-margin-top: -50px;
+margin-top: -70px;
 }
 .container-3 {
-margin-top: -50px;
+margin-top: -110px;
 }
 .container-4 {
-margin-top: 50px;
+margin-top: -60px; 
 }
     
 .logos{
@@ -450,6 +450,10 @@ transition:0.3s ease;
 }
 .path {
 font-size: 15px;
+}
+.line-about, .line-service, .line-tools, .line-touch {
+width: 35%;
+margin-left:32.5%;
 }
 .bline {
 font-weight: 600;

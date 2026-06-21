@@ -91,17 +91,11 @@ margin-top: -100px;
 margin-bottom: 15px;
 }
 .line-about, .line-service, .line-tools, .line-touch {
-width:110px;
+width: 10%;
 height:4px;
 background:#00cfff;
 border-radius:50px;
 margin:20px auto 0;
-}
-.line-about {
-margin-left: 60px;
-}
-.line-service, .line-tools, .line-touch {
-margin-left: 11.9cm;
 }
 .tab-titles{
 display: flex;

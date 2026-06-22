@@ -1,0 +1,513 @@
+* {
+margin: 0;
+padding: 0;
+font-family: 'poppins', sans-serif;
+box-sizing: border-box;
+}
+html{
+scroll-behavior: smooth;
+}
+body {
+background: black;
+color: #fff;
+}
+img {
+max-width: 100%;
+display: block;
+}
+.contact-card{
+cursor: pointer;
+}
+.container-3 {
+padding: 10px 5%;
+}
+.container-2 {
+padding: 10px 5%;
+}
+.container {
+padding: 10px 5%;
+margin-top: 100px;
+}
+.container-4 {
+padding: 10px 5%;
+padding-bottom: 20px;
+margin-top:100px;
+}
+.header-text {
+height: 600px;
+width: 100%;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+padding-left: 5%;
+background-image:
+    linear-gradient(
+        rgba(0,0,0,0.7),
+        rgba(0,0,0,0.7)
+    ),
+    url('/images/desktop-background.png');
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+}
+.path {
+width: 100%;
+background: gray;
+padding: 8px 5%;
+display: flex;
+flex-direction: row;
+align-items: center;
+margin-top: 30px;
+gap: 10px;
+font-weight: 1000;
+font-size: 17px;
+text-align: center;
+
+}
+.start {
+background: #0C0C0C;
+margin-top: 0px;
+}
+#about {
+padding: 80px 0;
+color: #ababab;
+}
+.row{
+display: flex;
+justify-content: space-between;
+flex-wrap: wrap;
+}
+.about-col-1{
+flex-basis: 35%;
+}
+.about-col-1 img{
+width: 100%;
+border-radius: 15px;
+}
+.aboutp {
+line-height: 25px;
+font-size: 15px;
+}
+.about-col-2{
+flex-basis: 100%;
+text-align: justify; 
+}
+.about-col-2{
+    grid-column: 1 / -1;
+}
+.sub-title {
+font-size:  50px;
+font-weight: 600;
+color: white;
+margin-top: -100px;
+margin-bottom: 15px;
+}
+.line-about, .line-service, .line-tools, .line-touch {
+width: 25%;
+height:4px;
+background:#00cfff;
+border-radius:50px;
+}
+.header-text h1{
+    margin-top: 70px;
+  }
+.tab-titles{
+display: flex;
+margin: 20px 0 40px
+}
+.tab-links{
+margin-right: 50px;
+font-size: 18px;
+font-weight: 500;
+cursor: pointer;
+position: relative;
+}
+.tab-links::after{
+content: '';
+width: 0;
+height: 3px;
+background-color: blue;
+position: absolute;
+left: 0;
+bottom: -8px;
+transition: 0.5s;
+}
+.tab-links.active-link::after{
+width: 50%;
+}
+.tab-contents ul li{
+list-style: none;
+margin: 10px 0;
+}
+.tab-contents ul li span{
+color: red;
+font-size: 14px;
+}
+.tab-contents{
+display: none;
+}
+.tab-contents.active-tab{
+display: block;
+}
+/*--------------------------------SERVICES--------------------------------*/
+.services-list{
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+grid-gap: 40px;
+margin-top: -50px;
+}
+.services-list div{
+display:flex;
+flex-direction: column;
+background: #262626;
+padding: 30px;
+font-size: 13px;
+font-weight: 300;
+border-radius: 10px;
+transition: background 0.5s, transform 0.5s;
+}
+.services-list div i{
+font-size: 50px;
+margin-bottom: 30px;
+}
+.services-list div h2{
+font-size: 29px;
+font-weight: 500;
+margin-bottom: 15px;
+}
+.services-list div a{
+text-decoration: none;
+color: #fff;
+font-size: 12px;
+margin-top: 20px;
+display: inline-block;
+}
+.services-list div:hover{
+background: blue;
+transform: translateY(-10px);
+}
+.btn{
+width: 100%;
+display: block;    
+height: 50px;
+border: 1px solid gray;
+padding: 16px 20px;
+border-radius: 6px;
+color: #fff;
+text-decoration: none;
+text-align: center;
+background: #ff004f;
+transition: background 0.5s;
+font-weight: 500;
+display: inline-block;
+background: #ff004f;
+margin-bottom: 15px;
+}
+.btn:hover{
+background: #ff004f;
+border: none;
+}
+/*--------------------------------CONTACT--------------------------------*/
+.contact-boxes{
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 18px;
+margin-top: 35px;
+}
+.contact-card{
+width: 100%;
+background:#111;
+border-radius:24px;
+padding:35px 25px;
+text-align:center;
+display:flex;
+justify-content:center;
+align-items:center;
+border:1px solid rgba(255,255,255,.06);
+transition:.3s;
+}
+.contact-card-2{
+width: 100%;
+background:#111;
+border-radius:24px;
+padding:35px 25px;
+text-align:center;
+display:flex;
+flex-direction: row;
+justify-content:center;
+align-items:center;
+border:1px solid rgba(255,255,255,.06);
+transition:.3s;
+}
+.contact-boxes-2{
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+gap: 18px;
+margin-top: 35px;
+justify-content:center;
+align-items:center;
+}
+a{
+text-decoration: none;
+color: inherit;
+}
+.contact-card:hover{
+border-color:#00cfff;
+transform:translateY(-5px);
+}
+.contact-card-2:hover{
+border-color:#00cfff;
+transform:translateY(-5px);
+}
+.contact-icon{
+width:65px;
+height:65px;
+border-radius:20%;
+background:#07151a;
+display:flex;
+justify-content:center;
+align-items:center;
+font-size:24px;
+color:#00cfff;
+}
+.contact-icon-2{
+width:65px;
+height:65px;
+border-radius:20%;
+display:flex;
+flex-direction: column;
+justify-content:center;
+align-items:center;
+font-size:24px;
+color:#00cfff;
+}
+.pro{
+font-weight: 1000;
+font-size: 22px;
+}
+.num {
+font-size: 30px;
+}
+.tools {
+filter:
+brightness(0)
+saturate(100%)
+invert(71%)
+sepia(100%)
+saturate(2000%)
+hue-rotate(160deg)
+drop-shadow(0 0 12px #00d9ff);
+}
+.fa-instagram, .fa-whatsapp, .fa-envelope, .fa-phone{
+font-size: 35px;
+}
+/*--------------------------------NAVBAR--------------------------------*/
+#navbar{
+width:100%;
+padding:25px 80px;
+position:absolute;
+top:0;
+left:0;
+z-index:1000;
+transition:.4s;
+}
+.nav-wrapper{
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+.logo{
+font-size:32px;
+font-weight:700;
+}
+.nav-links{
+display:flex;
+list-style:none;
+gap:70px;
+}
+.nav-links a{
+color:white;
+text-decoration:none;
+font-size:20px;
+}
+#menuBtn{
+display:none;
+background:none;
+border:none;
+color:white;
+font-size:30px;
+cursor:pointer;
+}
+@keyframes slideDown{
+from{
+transform:translateY(-120px);
+}
+to{
+transform:translateY(0);
+}
+}
+.logos {
+width: 140px;
+margin-top: -15px;
+margin-left: 3px;
+} 
+/*--------------------------------MOBILE--------------------------------*/
+@media(max-width:768px){
+#navbar{
+padding:15px;
+}
+.container-2 {
+margin-top: -120px;
+}
+.container {
+margin-top: -70px;
+}
+.container-3 {
+margin-top: -110px;
+}
+.container-4 {
+margin-top: -60px; 
+}
+    
+.logos{
+margin-top: -18px;
+} 
+.nav-wrapper{
+width:100%;
+height:60px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+.logo{
+font-size:22px;
+margin-left: 15px;
+}
+#menuBtn{
+display:block;
+background:none;
+border:none;
+color:white;
+font-size:30px;
+cursor:pointer;
+position:relative;
+left:-20px; /* ഇടത്തോട്ട് */
+top:-11px;   /* മുകളിലേക്ക് */
+}
+.nav-links li{
+text-align:center;
+border-bottom:1px solid rgba(255,255,255,0.15);
+}
+.nav-links li:last-child{
+border-bottom:none;
+}
+.nav-links{
+position:absolute;
+top:70px;
+left:0;
+width:92%;
+margin-left: 4%;
+background:rgba(17,17,17,0.7);
+border-radius: 20px;
+border:0.5px solid rgba(0,150,255,.3);
+flex-direction:column;
+gap:0;
+overflow:hidden;
+max-height:0;
+opacity:0;
+transition:.4s;
+}
+.nav-links.active{
+max-height:400px;
+opacity:1;
+}
+.nav-links li{
+text-align:center;
+}
+.nav-links a{
+display:block;
+padding:20px;
+font-size:18px;
+transition: background 0.5s, transform 0.5s;
+}
+.nav-links a:hover{
+background: #ff004f;
+}
+#navbar.scrolled{
+position:fixed;
+top:15px;
+left:0;
+width:92%;
+height:60px;
+padding:10px;
+margin-left: 4%;
+border-radius:999px;
+animation: slideDown .4s ease;
+border:2px solid rgba(0,150,255,.3);
+background:rgba(5,5,5,0.65);
+backdrop-filter:blur(20px);
+-webkit-backdrop-filter:blur(20px);
+}
+.header-text {
+background-image: url('/images/mobile-background.png');
+}
+.header-text h1{
+margin-top:300px;
+}
+#menuBtn i{
+transition:0.3s ease;
+}
+.line-about, .line-service, .line-tools, .line-touch {
+width: 35%;
+}
+.bline {
+font-weight: 600;
+margin-left: 7px;
+}
+.fa-chevron-right {
+margin-top: 1.5px;
+margin-left: 7px;
+}
+.btn{
+width: 100%;    
+}
+.contact-boxes{
+grid-template-columns: repeat(2, 1fr);
+}
+.contact-card{
+width: 100%;
+}
+.fa-instagram, .fa-whatsapp, .fa-envelope, .fa-phone{
+font-size: 28px;
+}
+.sub-title{
+font-size: 36px;
+margin-top:0px;
+}
+.about-col-1, .about-col-2{
+flex-basis: 100%;
+}
+.about-col-1{
+margin-bottom: 30px;
+}
+.services-list {
+margin-top: 100px;.
+
+}
+.about-col-2{
+font-size: 14px;
+}
+.start{
+margin-top: -70px;
+}
+.tab-links{
+font-size: 16px;
+margin-right: 20px;
+}
+.path {
+margin-top: -90px;
+font-size: 15px;
+gap: 2px;
+}
+  }

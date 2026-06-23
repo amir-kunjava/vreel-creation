@@ -57,7 +57,10 @@ document.addEventListener("dragstart", (e) => {
 });
 
 document.addEventListener("touchstart", (e) => {
-  if (e.target.tagName === "IMG") {
+  if (
+    e.target.tagName === "IMG" &&
+    !e.target.closest(".logo")
+  ) {
     e.preventDefault();
   }
 }, { passive: false });

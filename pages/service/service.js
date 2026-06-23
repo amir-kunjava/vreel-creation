@@ -56,3 +56,24 @@ menuIcon.classList.remove("fa-xmark");
 menuIcon.classList.add("fa-bars");
 }
 });
+
+document.addEventListener("contextmenu", (e) => {
+  if (e.target.tagName === "IMG") {
+    e.preventDefault();
+  }
+});
+
+document.addEventListener("dragstart", (e) => {
+  if (e.target.tagName === "IMG") {
+    e.preventDefault();
+  }
+});
+
+document.addEventListener("touchstart", (e) => {
+  if (
+    e.target.tagName === "IMG" &&
+    !e.target.closest(".logo")
+  ) {
+    e.preventDefault();
+  }
+}, { passive: false });

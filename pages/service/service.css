@@ -305,7 +305,7 @@ font-size: 35px;
 /*--------------------------------NAVBAR--------------------------------*/
 #navbar{
 width:100%;
-padding:25px 80px;
+padding: 10px 5%;
 position:absolute;
 top:0;
 left:0;
@@ -324,7 +324,7 @@ font-weight:700;
 .nav-links{
 display:flex;
 list-style:none;
-gap:70px;
+gap:60px;
 }
 .nav-links a{
 color:white;
@@ -349,8 +349,7 @@ transform:translateY(0);
 }
 .logos {
 width: 140px;
-margin-top: -15px;
-margin-left: 3px;
+margin-top: 3px;
 } 
 /*--------------------------------MOBILE--------------------------------*/
 @media(max-width:768px){
@@ -371,7 +370,7 @@ margin-top: -60px;
 }
     
 .logos{
-margin-top: -18px;
+margin-top: -19px;
 } 
 .nav-wrapper{
 width:100%;

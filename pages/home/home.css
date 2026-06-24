@@ -197,7 +197,7 @@ transform: translateY(-10px);
 .services-list-1 {
 display: grid;
 grid-template-columns: repeat(2, 1fr);
-gap: 40px;
+gap: 20px;
 }
 .services-list-1 div{
 display:flex;

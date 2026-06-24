@@ -60,7 +60,7 @@ color: red;
 }
 .path {
 width: 100%; 
-background: gray;
+background: gray; 
 padding: 8px 5%;
 display: flex;
 flex-direction: row;
@@ -196,7 +196,7 @@ transform: translateY(-10px);
 }
 .services-list-1 {
 display: grid;
-grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
+grid-template-columns: repeat(auto-fit, minmax(600px, 2fr));
 grid-gap: 40px;
 }
 .services-list-1 div{

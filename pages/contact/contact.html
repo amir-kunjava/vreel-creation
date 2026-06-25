@@ -653,48 +653,6 @@ gap: 2px;
   <button type="submit">Send Message</button>
 </form>
 
-<div class="section-box" id="successBox" style="display:none; text-align:center;">
-  <div style="
-    width:90px;
-    height:90px;
-    border-radius:50%;
-    background:#22C55E;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    margin:0 auto 20px;
-    animation:pop .5s ease;
-  ">
-    <span style="color:white;font-size:55px;font-weight:bold;">✓</span>
-  </div>
-
-  <h2 style="color:#16A34A;">Message Sent</h2>
-  <p style="font-size:14px;color:#555;">
-    Your message has been sent successfully.
-  </p>
-</div>
-
-<div class="section-box" id="errorBox" style="display:none; text-align:center;">
-  <div style="
-    width:90px;
-    height:90px;
-    border-radius:50%;
-    background:#EF4444;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    margin:0 auto 20px;
-    animation:pop .5s ease;
-  ">
-    <span style="color:white;font-size:55px;font-weight:bold;">✕</span>
-  </div>
-
-  <h2 style="color:#DC2626;">Failed</h2>
-  <p style="font-size:14px;color:#555;">
-    Unable to send your message. Please try again.
-  </p>
-</div>
-
 <!------------------------------Contact---------------------------------->
     <div id="contacts">
     <div class="container">
@@ -809,19 +767,16 @@ ${requirement}`;
     const data = await response.json();
 
     if (data.ok) {
-  document.getElementById("contactForm").style.display = "none";
-  document.getElementById("successBox").style.display = "block";
-  form.reset();
-} else {
+      alert("Message sent successfully!");
+      form.reset();
+      error.textContent = "";
+    } else {
       alert("Telegram Error: " + data.description);
     }
   } catch (err) {
-    catch (err) {
-  console.error(err);
-
-  document.getElementById("contactForm").style.display = "none";
-  document.getElementById("errorBox").style.display = "block";
-}
+    console.error(err);
+    alert("Failed to send message.");
+  }
 });
 
 //NAVBAR SCROLL

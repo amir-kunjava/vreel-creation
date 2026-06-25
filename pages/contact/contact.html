@@ -693,11 +693,14 @@ event.currentTarget.classList.add("active-link");
 document.getElementById(tabname).classList.add("active-tab");
 }
 
-//CONTACT FORM
+// CONTACT FORM + TELEGRAM AUTOMATION
 
 const form = document.getElementById("contactForm");
 const contact = document.getElementById("contact");
 const error = document.getElementById("contactError");
+
+const BOT_TOKEN = "YOUR_NEW_BOT_TOKEN";
+const CHAT_ID = "8591589542";
 
 contact.addEventListener("input", () => {
   const value = contact.value.trim();
@@ -718,68 +721,63 @@ contact.addEventListener("input", () => {
   }
 });
 
-form.addEventListener("submit", (e) => {
+form.addEventListener("submit", async (e) => {
+  e.preventDefault();
+
   const value = contact.value.trim();
 
   const isPhone = /^[0-9]{10}$/.test(value);
   const isEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
 
   if (!isPhone && !isEmail) {
-    e.preventDefault();
+    error.textContent =
+      "Enter a valid 10-digit phone number or email address.";
+    return;
   }
-});
 
-//FORM AUTOMATION
+  const name = document.querySelector('[name="name"]').value.trim();
+  const requirement = document
+    .querySelector('[name="requirement"]')
+    .value.trim();
 
-if (form) {
-  form.addEventListener("submit", async (e) => {
-    e.preventDefault();
-
-    const name = document.querySelector('[name="name"]').value.trim();
-    const contact = document.querySelector('[name="contact"]').value.trim();
-    const requirement = document.querySelector('[name="requirement"]').value.trim();
-
-    const message = `📩 New Contact Request
+  const message = `📩 New Contact Request
 
 👤 Name: ${name}
 
-📞 Contact: ${contact}
+📞 Contact: ${value}
 
 📝 Requirement:
 ${requirement}`;
 
-    const BOT_TOKEN = "7775872728:AAFGGJnAlRxLDFjuPDwjWCZeYHYLy6ltlbc";
-    const CHAT_ID = "8591589542";
-
-    try {
-      const response = await fetch(
-        `https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`,
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            chat_id: CHAT_ID,
-            text: message,
-          }),
-        }
-      );
-
-      const data = await response.json();
-
-      if (data.ok) {
-        alert("Message sent successfully!");
-        form.reset();
-      } else {
-        alert("Telegram Error: " + data.description);
+  try {
+    const response = await fetch(
+      `https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`,
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          chat_id: CHAT_ID,
+          text: message,
+        }),
       }
-    } catch (error) {
-      console.error(error);
-      alert("Failed to send message.");
+    );
+
+    const data = await response.json();
+
+    if (data.ok) {
+      alert("Message sent successfully!");
+      form.reset();
+      error.textContent = "";
+    } else {
+      alert("Telegram Error: " + data.description);
     }
-  });
-}
+  } catch (err) {
+    console.error(err);
+    alert("Failed to send message.");
+  }
+});
 
 //NAVBAR SCROLL
 
